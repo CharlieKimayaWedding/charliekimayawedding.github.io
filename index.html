@@ -30,58 +30,27 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/fa-code.css">
-    <link rel="stylesheet" href="./css/parallax.css">
-    <link rel="stylesheet" href="./css/text.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/envelope.css">
 
-<nav class='navbar navbar-expand-sm fixed-top flex-column navbar-custom navbar-light' style='border-bottom:2px solid rgb(220,220,220);padding-bottom:10px; background:#F8F8F8;'>
-  <a class="navbar-brand" href="./index.html" style="margin-left:1%; left: 50%; position: absolute; transform: translateX(-50%); font-family: 'Snell Roundhand', cursive; font-size:48px; color:rgba(0,0,0,.5)">Charlie & Kimaya's Wedding</a>
-  <a class="navbar-brand" href="./index.html" style="margin-left:1%; left: 50%; position: absolute; transform: translateX(-50%) translateY(70px); font-family: 'Courier New'; font-size:16px; color:rgba(0,0,0,.5)">2nd - 4th June 2023 &#8226 Brecon Beacons, Wales</a>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation" style='margin-left:1%; left: 100%; position: absolute; transform: translateX(-100%)'>
-   <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarToggler">
-    <ul class="navbar-nav flex-row ml-md-auto d-none' style='margin-right:2%'>
-      <li class="nav-item active">
-        <a class='nav-link' style='margin-left:1%; border-bottom: 3px solid #34568B; font-size:18px' href='./index.html'>Home</a>
-      </li>
-      <li class="nav-item">
-        <a class='nav-link' style='margin-left:1%; width: 6em; font-size:18px' href='./ontheday.html'>On the day</a>
-      </li>
-      <li class="nav-item">
-        <a class='nav-link' style='margin-left:1%; font-size:18px' href='./events.html'>Events</a>
-      </li>
-      <li class="nav-item">
-        <a class='nav-link' style='margin-left:1%; font-size:18px' href='./accomodation.html'>Accomodation</a>
-      </li>
-      <li class="nav-item">
-        <a class='nav-link' style='margin-left:1%; font-size:18px' href='./faqs.html'>FAQs</a>
-      </li>
-      <li class="nav-item">
-        <a class='nav-link' style='margin-left:1%; font-size:18px' href='./rsvp.html'>RSVP</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class="container" id="MainBody" style="margin-top: 8em">
-  <div class="row justify-content-center">
-  <h2 id="countdown" style="color:rgba(0,0,0,.5); font-size: 30px"></h2>
-  </div>
-  <div class="row justify-content-center">
-  <h5 style="font-size: 15px; color:rgba(0,0,0,.5)" id="main">Hello.</h5>
-  </div>
+<div class="wrapper">
+    <div class="mail">
+        <div class="cover"></div>
+        <div class="letter">
+          <h1>Charlie & Kimaya's Wedding</h1>
+          <h2>2nd - 4th June 2023 &#8226 Brecon Beacons, Wales</h2>
+          <h3 id="countdown" style="color:rgba(0,0,0,.5); font-size: 16px"></h3>
+          <input type="text" id="name" placeholder="password" style='position: absolute; top: 45%; left: 50%; transform: translate(-50%,50%); font-size:16px; color:rgba(0,0,0,.5);'>
+          <input type="submit" value="Submit" onclick="Redirect()" style='position: absolute; top: 55%; left: 50%; transform: translate(-50%,50%); font-size:16px; color:rgba(0,0,0,.5);'>
+        </div>
+    </div>
 </div>
 
 <script>
+function Redirect(){
+    setTimeout(function() {window.alert("Incorrect password")}, 100);
+    window.location = './' + document.getElementById('name').value + '/index.html'
+}
+
 // Set the date we're counting down to
 var countDownDate = new Date("Jun 3, 2023 12:00:00").getTime();
 
@@ -90,21 +59,21 @@ var x = setInterval(function() {
 
   // Get today's date and time
   var now = new Date().getTime();
-    
+
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
-    
+
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
+
   // Output the result in an element with id="demo"
   document.getElementById("countdown").innerHTML = "Countdown: " + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s";
-    
-  // If the count down is over, write some text 
+
+  // If the count down is over, write some text
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "EXPIRED";

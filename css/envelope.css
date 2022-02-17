@@ -1,0 +1,123 @@
+/* code inspired from https://www.youtube.com/watch?v=MkiR6ycHTLM */
+
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.mail{
+    width: 600px;
+    height: 400px;
+    background: #ff8789;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.mail:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 300px solid transparent;
+    border-right: 300px solid #ff393c;
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid #ff393c;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.mail:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 300px solid #ff5355;
+    border-right: 300px solid #ff5355;
+    border-top: 200px solid transparent;
+    border-bottom: 200px solid #ff5355;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 4;
+}
+
+.cover:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+    border-top: 200px solid #ff8789;
+    border-bottom: 200px solid transparent;
+    z-index: 6;
+    transform-origin: top;
+    transform: rotateX(0deg);
+    transition: all 1s 1s ease;
+}
+
+@keyframes mymove {
+    0% {top: 0px;}
+    50% {top: -400px; z-index: 5}
+    100% {top: 0px; z-index: 5}
+}
+
+.letter{
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    left: 10px;
+    background: #dedede;
+    width: 580px;
+    height: 380px;
+    border-radius: 10px;
+}
+
+.letter h1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-42%,-10%);
+    font-family: 'Snell Roundhand', cursive;
+    font-size:38px;
+    color: rgba(0,0,0,.5);
+}
+
+.letter h2{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-42%,-50%);
+    font-family: 'Courier New';
+    font-size:16px;
+    color: rgba(0,0,0,.5);
+}
+
+.letter h3{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-32%,-50%);
+    font-family: 'Courier New';
+    font-size:16px;
+    color: rgba(0,0,0,.5);
+}
+
+.mail:hover .cover:before{
+    transform: rotateX(180deg);
+    transition: all 1s ease;
+}
+
+.mail:hover .letter{
+    position: relative;
+    animation: mymove 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
