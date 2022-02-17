@@ -72,45 +72,96 @@
   </div>
 </nav>
 
+<style>
+.card {
+  transition: all .3s;
+}
+.card:hover {
+  transform: translate(0px, -3px);
+  text-decoration: none;
+}
+</style>
+
 <div class="container" id="MainBody" style="margin-top: 8em">
   <div class="row justify-content-center">
-  <h2 id="countdown" style="color:rgba(0,0,0,.5); font-size: 30px"></h2>
+    <h5 style="font-size: 15px; color:rgba(0,0,0,.5); font-family: 'Snell Roundhand', cursive; font-size:38px" id="main">Welcome</h5>
   </div>
+  <div class="row justify-content-center" style="margin-top: -2em">
+    <p style="font-size: 15px; color:rgba(0,0,0,.5);"><br><br>We are excited to announce that we are finally getting married and we can't wait for you to join us for our special day. In order to prepare and plan, we have created this website (well Charlie has) with all of the information that you need. Have a look around and remember to RSVP!</p>
+  </div>
+  <div class="container" id="location_images">
+    <div class="row">
+        <div class="col-sm-4">
+          <div class="card mb-4 text-dark shadow-lg card-hover" style="background:#F8F8F8; cursor: pointer; border-radius:10px" onmouseover="" onclick="window.location='https://www.talljohnshouse.com'">
+            <div class="row">
+              <div class="card-body">
+                <img src="./images/charlie_and_kimaya_img2.jpg" style="width:83%; display:block; margin-left:auto; margin-right:auto">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card mb-4 text-dark shadow-lg card-hover" style="background:#F8F8F8; cursor: pointer; border-radius:10px" onmouseover="" onclick="window.location='https://www.talljohnshouse.com'">
+            <div class="row">
+              <div class="card-body">
+                <img src="./images/charlie_and_kimaya_img1.jpg" style="width:90%; display:block; margin-left:auto; margin-right:auto">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card mb-4 text-dark shadow-lg card-hover" style="background:#F8F8F8; cursor: pointer; border-radius:10px" onmouseover="" onclick="window.location='https://www.talljohnshouse.com'">
+            <div class="row">
+              <div class="card-body">
+                <img src="./images/charlie_and_kimaya_img3.jpg" style="width:90%; display:block; margin-left:auto; margin-right:auto">
+              </div>
+            </div>
+          </div>
+        </div
+      </div>
+    </div>
   <div class="row justify-content-center">
-  <h5 style="font-size: 15px; color:rgba(0,0,0,.5)" id="main">Hello.</h5>
+    <h5 style="font-size: 15px; color:rgba(0,0,0,.5); font-family: 'Snell Roundhand', cursive; font-size:38px" id="main">Our Venue</h5>
   </div>
+  <div class="row justify-content-center" style="margin-top: -2em">
+    <p style="font-size: 15px; color:rgba(0,0,0,.5);"><br><br>We have chosen to get married in Wales in the heart of the <a href="https://www.breconbeacons.org">Brecon Beacons</a>. This National Park was established in 1957 and covers 519 square miles in total. As you may know, Wales is a special location for both of us and we couldn't imagine getting married in any other location. In our opinion, it's the perfect place to get married.<br><br>We are getting married at <a href=https://www.talljohnshouse.com>Tall John's Manor House</a>. This venue looks across to the Black Mountains on one side and over to the Brecon Beacons on the other. Tall John's Manor House was built in 1588 and underwent substantial renovations in the 19th and 20th centuries by members of the British Navy.</p>
+  </div>
+  <div class="container" id="location_images">
+    <div class="row">
+        <div class="col-sm-4">
+          <div class="card mb-4 text-dark shadow-lg card-hover" style="background:#F8F8F8; cursor: pointer; border-radius:10px" onmouseover="" onclick="window.location='https://www.talljohnshouse.com'">
+            <div class="row">
+              <div class="card-body">
+                <img src="images/tall_johns_house_img2.jpg" style="width:90%; display:block; margin-left:auto; margin-right:auto">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card mb-4 text-dark shadow-lg card-hover" style="background:#F8F8F8; cursor: pointer; border-radius:10px" onmouseover="" onclick="window.location='https://www.talljohnshouse.com'">
+            <div class="row">
+              <div class="card-body">
+                <img src="./images/tall_johns_house_img1.jpg" style="width:90%; display:block; margin-left:auto; margin-right:auto">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card mb-4 text-dark shadow-lg card-hover" style="background:#F8F8F8; cursor: pointer; border-radius:10px" onmouseover="" onclick="window.location='https://www.talljohnshouse.com'">
+            <div class="row">
+              <div class="card-body">
+                <img src="./images/tall_johns_house_img3.jpg" style="width:100%; display:block; margin-left:auto; margin-right:auto">
+              </div>
+            </div>
+          </div>
+        </div
+      </div>
+    </div>
 </div>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jun 3, 2023 12:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("countdown").innerHTML = "Countdown: " + days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
+<div class="row justify-content-center">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.3504759645184!2d-3.2589205838429134!3d51.909316489057055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e2c0df5415cd3%3A0x9265dc8b56ada3a6!2sTall%20John&#39;s%20House!5e0!3m2!1sen!2suk!4v1645121599427!5m2!1sen!2suk" width=95% height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+</div>
 
 </body>
 </html>
