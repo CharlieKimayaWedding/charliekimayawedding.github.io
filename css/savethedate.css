@@ -54,7 +54,7 @@
     border-right: 300px solid transparent;
     border-top: 200px solid #EDA800;
     border-bottom: 200px solid transparent;
-    z-index: 6;
+    z-index: 4;
     transform-origin: top;
     transform: rotateX(0deg);
     transition: all 1s 1s ease;
@@ -79,12 +79,12 @@
 
 .letter h1{
     position: absolute;
-    top: 25%;
+    top: 10%;
     left: 50%;
     width: 500px;
     transform: translate(-50%,10%);
-    font-family: 'Stencil Std', fantasy;
-    font-size:60px;
+    font-family: 'Snell Roundhand', cursive; /* 'Stencil Std', fantasy; */
+    font-size:102px;
     color: #7d5825;
 }
 
