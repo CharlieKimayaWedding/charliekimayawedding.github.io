@@ -2,10 +2,8 @@
 
 .wrapper{
     position: absolute;
-    top: 50%;
-    bottom: 25%;
-    left: 25%;
-    right: 25%;
+    top: 40vh;
+    left: 30vw;
 }
 
 .mail{
