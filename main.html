@@ -30,18 +30,17 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/savethedate.css">
+    <link rel="stylesheet" href="./css/envelope.css">
 
 <div class="wrapper">
     <div class="mail">
         <div class="cover"></div>
         <div class="letter">
-          <img src="images/STD.png" width=580px height=380px>
-          <h1>Save the date</h1>
-          <h2>Charlie & Kimaya's Wedding</h2>
-          <h3>3rd June 2023 &#8226 Brecon Beacons, Wales</h3>
-          <h4 id="countdown" style="font-size: 16px"></h4>
-          <h5>Formal invitation to follow</h5>
+          <h1>Charlie & Kimaya's Wedding</h1>
+          <h2>2nd - 4th June 2023 &#8226 Brecon Beacons, Wales</h2>
+          <h3 id="countdown" style="color:rgba(0,0,0,.5); font-size: 16px"></h3>
+          <input type="text" id="name" placeholder="password" style='position: absolute; top: 45%; left: 50%; transform: translate(-50%,50%); font-size:16px; color:rgba(0,0,0,.5);'>
+          <input type="submit" value="Submit" onclick="Redirect()" style='position: absolute; top: 55%; left: 50%; transform: translate(-50%,50%); font-size:16px; color:rgba(0,0,0,.5);'>
         </div>
     </div>
 </div>
@@ -71,7 +70,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Output the result in an element with id="demo"
-  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  document.getElementById("countdown").innerHTML = "Countdown: " + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s";
 
   // If the count down is over, write some text
