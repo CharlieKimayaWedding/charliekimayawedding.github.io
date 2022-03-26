@@ -37,7 +37,7 @@
         <div class="letter">
           <img src="images/save_the_date.png" width=580px height=380px id="save_the_date">
           <h4 id="countdown" style="font-size: 16px"></h4>
-          <button type="button" onclick=ChangeImage() id="change_language" style='position: absolute; top: 85%; left: 50%; transform: translate(-50%,50%); font-size:16px; color:rgba(0,0,0,.5);'>Hindi</button>
+          <button type="button" onclick=ChangeImage() id="change_language" style='position: absolute; top: 85%; left: 50%; transform: translate(-50%,50%); font-size:16px; color:rgba(0,0,0,.5);'>हिन्दी</button>
         </div>
     </div>
 </div>
@@ -48,7 +48,7 @@ function ChangeImage() {
     src = document.getElementById("save_the_date").src
     if (src.includes("hindi.png")) {
         document.getElementById("save_the_date").src = "images/save_the_date.png"
-        document.getElementById("change_language").innerHTML = "Hindi"
+        document.getElementById("change_language").innerHTML = "हिन्दी"
     } else {
         document.getElementById("save_the_date").src = "images/save_the_date_hindi.png"
         document.getElementById("change_language").innerHTML = "English"
