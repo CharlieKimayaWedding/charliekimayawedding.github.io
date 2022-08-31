@@ -258,12 +258,14 @@ var x = document.getElementById("collapsible_navbar");
 var leftflowers = document.getElementById("flowers_left");
 var rightflowers = document.getElementById("flowers_right");
 var header = document.getElementById("header")
+var main = document.getElementById("MainBody");
 var width = document.body.clientWidth;
 if (width < 580) {
     x.style.display = "block";
     header.src = "images/header_small.png";
     leftflowers.style.display = "None";
     rightflowers.style.display = "None";
+    main.style.marginTop = "5em";
 }
 </script>
 
