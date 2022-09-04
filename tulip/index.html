@@ -44,7 +44,7 @@
     <img src="images/flowers_right.png" width=20% style="position: absolute; bottom:0; right: 0; max-width: 250px;" id="flowers_right">
   </div>
   <p> </p>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation" style='margin-left:1%; left: 5%; top:80px; font-size:14px; position: absolute;'>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation" style='margin-left:1%; left: 5%; top:80px; font-size:14px; position: absolute; width:80%'>
    <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarToggler" style='margin-top: -20px;'>
@@ -326,11 +326,13 @@ var rightflowers = document.getElementById("flowers_right");
 var header = document.getElementById("header")
 var main = document.getElementById("MainBody");
 var width = document.body.clientWidth;
+if (width < 1072) {
+    leftflowers.style.display = "None";
+    rightflowers.style.display = "None";
+}
 if (width < 580) {
     x.style.display = "block";
     header.src = "images/header_small.png";
-    leftflowers.style.display = "None";
-    rightflowers.style.display = "None";
     main.style.marginTop = "3em";
 }
 </script>
