@@ -36,7 +36,7 @@ document.getElementById('name').onkeydown = function(e){
 
 function Redirect(){
     setTimeout(function() {window.alert("Incorrect password")}, 1500);
-    window.location = './' + document.getElementById('name').value + '/index.html'
+    window.location = './' + document.getElementById('name').value.toLowerCase() + '/index.html'
 }
 
 // Set the date we're counting down to
