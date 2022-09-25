@@ -19,33 +19,28 @@
     <div class="mail">
         <div class="cover"></div>
         <div class="letter">
-          <img src="images/save_the_date.png" width=580px height=380px id="save_the_date">
+          <img src="images/invite.png" width=580px height=380px id="invite">
           <h4 id="countdown" style="font-size: 16px"></h4>
-          <button type="button" onclick=ChangeImage() id="change_language" style='position: absolute; top: 85%; left: 50%; transform: translate(-50%,50%); font-size:16px; color:rgba(0,0,0,.5);'>हिंदी</button>
+          <input type="text" id="name" placeholder="password" style='position: absolute; top: 55%; left: 50%; transform: translate(-50%,50%); font-size:16px; color:rgba(0,0,0,.5);'>
+          <input type="submit" value="Submit" onclick="Redirect()" id="submit_button" style='position: absolute; top: 85%; left: 50%; transform: translate(-50%,50%); font-size:16px; color:rgba(0,0,0,.5);'>
         </div>
     </div>
 </div>
 
 <script>
-function ChangeImage() {
-    var src
-    src = document.getElementById("save_the_date").src
-    if (src.includes("hindi.png")) {
-        document.getElementById("save_the_date").src = "images/save_the_date.png"
-        document.getElementById("change_language").innerHTML = "हिंदी"
-    } else {
-        document.getElementById("save_the_date").src = "images/save_the_date_hindi.png"
-        document.getElementById("change_language").innerHTML = "English"
-    }
-}
+document.getElementById('name').onkeydown = function(e){
+   if (e.keyCode == 13){
+     Redirect();
+   }
+};
 
 function Redirect(){
-    setTimeout(function() {window.alert("Incorrect password")}, 100);
-    window.location = './' + document.getElementById('name').value + '/index.html'
+    setTimeout(function() {window.alert("Incorrect password")}, 1500);
+    window.location = './' + document.getElementById('name').value.toLowerCase() + '/index.html'
 }
 
 // Set the date we're counting down to
-var countDownDate = new Date("Jun 3, 2023 15:30:00").getTime();
+var countDownDate = new Date("Jun 3, 2023 11:30:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
