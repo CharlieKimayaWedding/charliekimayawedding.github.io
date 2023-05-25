@@ -134,7 +134,16 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
 </script>
+<style>
+.popover {
+    maxwidth=550px;
+    width: 550px;
+}
+</style>
 
 <div class="container" id="MainBody" style="margin-top: 10em">
   <div class="row justify-content-center">
@@ -293,7 +302,7 @@ var x = setInterval(function() {
                   <a class="fa fa-car" style="font-size: 80px; padding-right: 5px; color:grey"></a>
                 </div>
                 <div class="row justify-content-center">
-                  <p style="font-size: 15px; color:rgba(0,0,0,.5);"><br><br>If travelling by car, please enter the following address for Tall John's House into your satnav:<br><br><span style="font-weight:bold">Tall John's House, Llangasty Tal-y-llyn, Brecon, LD3 7PX</span><br><br>This will bring you to the rough area but not to the exact location. When you get to <span style="font-weight:bold">Bwlch</span> (a small village between Brecon and Crickhowell) please follow <a href="https://eventtemple-production.s3.amazonaws.com/uploads/asset/file/15189/Tall-John_s-House-directions-c24588716f.pdf">these instructions</a>.</p>
+                  <p style="font-size: 15px; color:rgba(0,0,0,.5);"><br><br>If travelling by car, please enter the following address for Tall John's House into your satnav:<br><br><span style="font-weight:bold">Tall John's House, Llangasty Tal-y-llyn, Brecon, LD3 7PX</span><br><br>This will bring you to the rough area but not to the exact location. When you get to <span style="font-weight:bold">Bwlch</span> (a small village between Brecon and Crickhowell) <button value='test' class='btn' style='cursor:pointer; border:none; font-size:15px; padding:0px; color:#007bff; background-color:#f1ecdf; margin:0px;' data-toggle='popover' data-placement='top' data-content="When you get to Bwlch, turn by the War Memorial signed Lllangorse and continue for 1/4 mile before taking the first lane to the left signed Pennorth. Follow this lane for a mile, and Tall John's house is just on the left after a wide layby and a blue sign saying Llangasty Tallylyn. Parking is in the field opposite Tall John's House.">please follow these instructions</button>
                 </div>
               </div>
             </div>
